@@ -1,1 +1,6 @@
-
+<h3>Commented posts for <%=@user.username%></h3>
+<ul> 
+    <%@user.posts.each do |post|%>
+        <li><%=link_to post.title, post_path(post)%></li>
+    <%end%>
+</ul>
